@@ -1,6 +1,16 @@
 ```markdown
 # Solución al Problema de Ejecución de Scripts en PowerShell para la creación de Proyecto React con VITE
 
+PS C:\tallereact> npm create vite@latest
+npm : No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts está deshabilitada en este
+sistema. Para obtener más información, consulta el tema about_Execution_Policies en https:/go.microsoft.com/fwlink/?LinkID=135170.
+En línea: 1 Carácter: 1
++ npm create vite@latest
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+
 El error que estás experimentando se debe a que **PowerShell tiene una política de ejecución de scripts deshabilitada de manera
 predeterminada para proteger el sistema**. Para solucionar este problema, debes cambiar la política de ejecución de PowerShell.
 
