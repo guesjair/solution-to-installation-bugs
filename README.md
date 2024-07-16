@@ -10,8 +10,9 @@ PS C:\tallereact> npm create vite@latest
 Puedes encontrarte con el siguiente error:
 
 ```plaintext
-npm : No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts está deshabilitada en este
-sistema. Para obtener más información, consulta el tema about_Execution_Policies en https:/go.microsoft.com/fwlink/?LinkID=135170.
+npm : No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts está deshabilitada
+en este sistema. Para obtener más información, consulta el tema about_Execution_Policies en: 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
 En línea: 1 Carácter: 1
 + npm create vite@latest
 + 
@@ -19,7 +20,7 @@ En línea: 1 Carácter: 1
     + FullyQualifiedErrorId : UnauthorizedAccess
 ```
 
-Este error se debe a que **PowerShell tiene una política de ejecución de scripts deshabilitada de manera predeterminada para proteger el sistema**. Para solucionar este problema, debes cambiar la política de ejecución de PowerShell.
+Este error se debe a que **PowerShell tiene una política de ejecución de scripts deshabilitada de manera predeterminada para proteger el sistema**. Para solucionar este problema, tienes que cambiar la política de ejecución de PowerShell.
 
 ## Sigue estos pasos:
 
@@ -58,5 +59,4 @@ Después de cambiar la política de ejecución, deberías poder ejecutar el coma
 
 ```powershell
 Set-ExecutionPolicy Restricted
-```
 ```
